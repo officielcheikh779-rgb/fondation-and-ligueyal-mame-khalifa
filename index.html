@@ -1,84 +1,28 @@
- <li><strong>Solidarité Tivaouane :</strong> Organisation et soutien lors des grands événements religieux.</li>
-            <li><strong>Aide Sociale :</strong> Assistance aux familles et aux membres dans le besoin.</li>
-            <li><strong>Éducation :</strong> Transmission des valeurs et de la culture de la Ligueyal.</li>
-        </ul>
-    </section>
-
-<center><img src="photo_2026-03-10_23-47-45.jpg" alt="Logo Fondation" style="width:250px; border-radius:10px; margin-top:20px;"></center>
-
-    <section id="galerie">
-        <h2>Galerie Photos</h2>
-        <div class="galerie">
-            <img src="photo1.jpg" alt="Réunion">
-            <img src="logo.jpg.jpg" alt="Action sociale">
-            <img src="photo2.jpg" alt="Jeunesse">
-        </div>
-    </section>
-
-    <section id="equipe" style="text-align: center;">
-        <h2>Notre Équipe</h2>
-        <p><strong>Pape Samba Gueye</strong> - Président Fondateur</p>
-        <p>Accompagné par un bureau dévoué et une jeunesse dynamique engagée pour la cause de Mame Khalifa.</p>
-    </section>
-
-    <section id="don" style="text-align: center; border: 2px solid var(--jaune);">
-        <h2>Faire un Don</h2>
-        <p>Soutenez nos projets et aidez-nous à faire grandir nos actions sociales.</p>
-        <a href="https://wa.me/221764699681" class="btn-don">SOUTENIR LA FONDATION</a>
-    </section>
-
-    <section id="contact" style="text-align: center;">
-        <h2>Contact</h2>
-        <p>📍 Siège : Tivaouane, Sénégal</p>
-        <p>📞 Téléphone : +221 76 469 96 81</p>
-        <p>📧 Email : contact@fondationkhalifa.sn</p>
-    </section>
-
-</div>
-
-<footer>
-    <p>&copy; 2026 Fondation And Ligueyal Mame Khalifa <br> Perpétuer l'excellence et la solidarité.</p>
-</footer>
-
-</body>
-</html>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fondation And Ligueyal Mame Khalifa</title>
     <style>
-        :root {
-            --bleu: #1a3a6d;
-            --jaune: #ffcc00;
-            --blanc: #ffffff;
-            --gris-clair: #f8fafc;
-        }
-
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: var(--gris-clair); color: #333; scroll-behavior: smooth; }
-
+        :root { --bleu: #1a3a6d; --jaune: #f4d03f; }
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f4; color: #333; }
+        
         /* NAVIGATION */
-        nav {
-            background: var(--bleu);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+        nav { background: var(--bleu); padding: 15px; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; flex-wrap: wrap; }
         nav a { color: white; margin: 5px 15px; text-decoration: none; font-weight: bold; font-size: 0.85em; text-transform: uppercase; }
         nav a:hover { color: var(--jaune); }
 
         /* HEADER & LOGO */
-        header {
-            background: linear-gradient(rgba(26, 58, 109, 0.9), rgba(26, 58, 109, 0.9));
-            color: white; padding: 60px 20px; text-align: center;
-        <div class="logo-container">
-    <img src="photo_2026-03-10_23-47-45.jpg" alt="Logo Fondation">
-</div>
+        header { background: linear-gradient(rgba(26, 58, 109, 0.9), rgba(26, 58, 109, 0.9)); color: white; padding: 60px 20px; text-align: center; }
+        
+        .logo-container {
+            width: 180px; height: 180px; background: white; border-radius: 50%;
+            margin: 0 auto 20px; border: 5px solid var(--jaune); overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        .logo-container img { width: 100%; height: 100%; object-fit: cover; }
 
         /* SECTIONS */
         .container { max-width: 1000px; margin: auto; padding: 20px; }
@@ -86,25 +30,12 @@
         h2 { color: var(--bleu); text-align: center; border-bottom: 3px solid var(--jaune); display: table; margin: 0 auto 30px; padding-bottom: 10px; }
 
         /* GALERIE */
-        .galerie {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        .galerie img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
+        .galerie { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .galerie img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; border: 2px solid #ddd; }
 
         /* BOUTONS */
-        .btn-wa {
-            display: inline-block; background: #25D366; color: white;
-            padding: 15px 35px; border-radius: 50px; text-decoration: none;
-            font-weight: bold; font-size: 1.1em; margin-top: 20px;
-        }
-        .btn-don {
-            display: inline-block; background: var(--jaune); color: var(--bleu);
-            padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold;
-        }
-
-        /* FOOTER */
+        .btn-wa { display: inline-block; background: #25D366; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1em; margin-top: 20px; }
+        
         footer { background: var(--bleu); color: white; text-align: center; padding: 40px; margin-top: 50px; }
     </style>
 </head>
@@ -115,14 +46,12 @@
     <a href="#propos">À Propos</a>
     <a href="#programmes">Programmes</a>
     <a href="#galerie">Galerie</a>
-    <a href="#equipe">Équipe</a>
-    <a href="#don">Faire un don</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <header id="accueil">
     <div class="logo-container">
-        <img src="c:\Users\ibnch\OneDrive\Bureau\fondation-site\images\logo.jpg.jpg" alt="Logo Fondation" onerror="this.src='photo_2026-03-10_23-47-45.jpg" alt="Logo Fondation';">
+        <img src="photo_2026-03-10_23-47-45.jpg" alt="Logo Fondation">
     </div>
     <h1>Fondation And Ligueyal Mame Khalifa</h1>
     <p>« Au service de Mame Khalifa »</p>
@@ -130,7 +59,6 @@
 </header>
 
 <div class="container">
-    
     <section id="propos">
         <h2>Histoire de la Fondation</h2>
         <p>La <strong>Fondation And Ligueyal Mame Khalifa</strong> a été créée le <strong>4 février 2022</strong> par <strong>Pape Samba Gueye</strong>.</p>
@@ -140,3 +68,17 @@
     <section id="programmes">
         <h2>Nos Programmes</h2>
         <ul>
+            <li><strong>Solidarité Tivaouane :</strong> Organisation et soutien lors des grands événements religieux.</li>
+            <li><strong>Aide Sociale :</strong> Assistance aux familles et aux membres dans le besoin.</li>
+            <li><strong>Éducation :</strong> Transmission des valeurs et de la culture de la Ligueyal.</li>
+        </ul>
+    </section>
+
+    <section id="galerie">
+        <h2>Galerie Photos</h2>
+        <div class="galerie">
+            <img src="photo_2026-03-10_23-47-45.jpg" alt="Photo 1">
+            <img src="photo_2026-03-10_23-47-45.jpg" alt="Photo 2">
+            <img src="photo_2026-03-10_23-47-45.jpg" alt="Photo 3">
+        </div>
+    </section>
