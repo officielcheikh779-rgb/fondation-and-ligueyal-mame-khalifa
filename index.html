@@ -2,138 +2,114 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fondation And Ligueyal Mame Khalifa | Officiel</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --vert-royal: #004d26;
-            --vert-lumineux: #007a3d;
-            --or-prestige: #d4af37;
-            --or-clair: #f1d36e;
+            --bleu-prestige: #002366; /* Bleu Royal/Nuit */
+            --bleu-clair: #003399;
+            --or-royal: #c5a021;     /* Doré */
+            --or-lumineux: #f1d36e;
             --blanc: #ffffff;
-            --wave-bleu: #1c9ade;
+            --gris-tres-leger: #f9f9f9;
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
         body { 
             font-family: 'Montserrat', sans-serif; 
             margin: 0; padding: 0;
-            background: var(--blanc);
-            color: #002e17;
-            overflow-x: hidden;
+            background-color: var(--blanc);
+            color: #333;
+            line-height: 1.6;
         }
 
-        /* BARRE DE NAVIGATION DORÉE */
+        /* NAVIGATION BARRE */
         nav {
-            background: var(--or-prestige);
-            padding: 15px 0;
+            background: var(--bleu-prestige);
+            padding: 20px 0;
             position: sticky;
             top: 0; z-index: 2000;
+            border-bottom: 3px solid var(--or-royal);
             display: flex; justify-content: center; flex-wrap: wrap;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         nav a {
-            color: var(--vert-royal); margin: 5px 15px;
-            text-decoration: none; font-weight: 800; font-size: 0.8em;
+            color: var(--blanc); margin: 5px 15px;
+            text-decoration: none; font-weight: 700; font-size: 0.85em;
             text-transform: uppercase; letter-spacing: 1px;
-        }
-
-        /* HEADER MAJESTUEUX */
-        header {
-            background: linear-gradient(rgba(0, 77, 38, 0.8), rgba(0, 122, 61, 0.7)), 
-                        url('mosquee.jpg'); 
-            background-size: cover; background-position: center;
-            color: white; padding: 120px 20px; text-align: center;
-            border-bottom: 8px solid var(--or-prestige);
-        }
-        
-        .logo-box {
-            width: 190px; height: 190px; background: white; border-radius: 50%;
-            margin: 0 auto 30px; border: 6px solid var(--or-prestige);
-            overflow: hidden; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
-        }
-        .logo-box img { width: 100%; height: 100%; object-fit: cover; }
-
-        h1 { font-family: 'Playfair Display', serif; font-size: 2.8em; margin-bottom: 10px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-        .slogan { font-weight: 700; color: var(--or-clair); letter-spacing: 3px; text-transform: uppercase; }
-
-        /* SECTIONS COLORÉES (SANS GRIS) */
-        section { padding: 100px 20px; text-align: center; }
-        
-        /* Section Esprit : Vert Lumière */
-        #esprit { background: var(--vert-royal); color: white; }
-        #esprit h2 { color: var(--or-prestige); }
-        #esprit h2::after { background: var(--blanc); }
-
-        /* Section Missions : Blanc & Or */
-        #missions { background: var(--blanc); }
-        #missions h2 { color: var(--vert-royal); }
-        #missions h2::after { background: var(--or-prestige); }
-
-        /* Section Cotisation : Or Dégradé */
-        #cotisation { 
-            background: linear-gradient(135deg, var(--or-prestige), var(--or-clair)); 
-            color: var(--vert-royal);
-        }
-        #cotisation h2 { color: var(--vert-royal); }
-
-        .container { max-width: 1100px; margin: auto; }
-        h2 { font-family: 'Playfair Display', serif; font-size: 2.5em; margin-bottom: 30px; }
-        h2::after { content: ''; display: block; width: 80px; height: 5px; margin: 20px auto; border-radius: 10px; }
-
-        /* BOUTONS */
-        .btn {
-            display: inline-block; padding: 20px 45px; border-radius: 50px;
-            text-decoration: none; font-weight: 900; font-size: 1.1em;
-            margin: 10px; transition: 0.4s; color: white; border: none;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        .btn-wa { background: #25D366; }
-        .btn:hover { transform: scale(1.
-                                      5) translateY(-5px); filter: brightness(1.1); }
-
-        /* CARTE DE PAIEMENT WAVE */
-        .pay-card {
-            background: white; border-radius: 30px; padding: 50px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
-            max-width: 550px; margin: 40px auto;
-        }
-        .pay-info { margin-bottom: 30px; }
-        .pay-info label { font-size: 0.9em; font-weight: 800; color: var(--vert-royal); text-transform: uppercase; }
-        .pay-info p { font-size: 1.8em; font-weight: 900; color: #333; margin: 10px 0; }
-
-        .btn-wave-action {
-            background: var(--wave-bleu); width: 100%;
-        }
-
-        /* GRILLE DE MISSIONS */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .m-card { 
-            background: var(--vert-royal); color: white; padding: 40px; 
-            border-radius: 25px; border: 3px solid var(--or-prestige);
             transition: 0.3s;
         }
-        .m-card:hover { transform: translateY(-10px); background: var(--vert-lumineux); }
-        .m-card i { font-size: 3.5em; color: var(--or-prestige); margin-bottom: 25px; }
+        nav a:hover { color: var(--or-royal); }
+
+        /* HEADER (ACCUEIL) */
+        header {
+            background: linear-gradient(rgba(0, 35, 102, 0.8), rgba(0, 35, 102, 0.8)), 
+                        url('mosquee.jpg'); /* Ton image de la mosquée */
+            background-size: cover; background-position: center;
+            color: white; padding: 100px 20px; text-align: center;
+        }
+
+        .logo-box {
+            width: 180px; height: 180px; background: white; border-radius: 50%;
+            margin: 0 auto 30px; border: 5px solid var(--or-royal);
+            overflow: hidden; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .logo-box img { width: 90%; height: auto; object-fit: contain; }
+
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.5em; margin: 10px 0; }
+        .slogan { color: var(--or-lumineux); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px; }
+
+        /* BOUTON WHATSAPP */
+        .btn-wa {
+            display: inline-block; background: #25D366; color: white;
+            padding: 18px 35px; border-radius: 50px;
+            text-decoration: none; font-weight: 800; font-size: 1.1em;
+            transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .btn-wa:hover { transform: translateY(-5px); filter: brightness(1.1); }
+
+        /* SECTIONS BIEN ORGANISÉES */
+        section { padding: 80px 20px; text-align: center; }
+        .container { max-width: 1100px; margin: auto; }
+        
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.2em; color: var(--bleu-prestige); margin-bottom: 20px; }
+        h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--or-royal); margin: 15px auto; }
+
+        /* GRILLE DES MISSIONS */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { 
+            background: var(--gris-tres-leger); padding: 40px; border-radius: 15px; 
+            border-bottom: 5px solid var(--or-royal); transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-10px); background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .card i { font-size: 3em; color: var(--bleu-prestige); margin-bottom: 20px; }
+
+        /* SECTION COTISATION (WAVE DIRECT) */
+       #cotisation { background: var(--bleu-prestige); color: white; }
+        #cotisation h2 { color: var(--or-royal); }
+
+        .wave-card {
+            background: var(--blanc); color: #333;
+            max-width: 500px; margin: 40px auto; padding: 40px;
+            border-radius: 20px; border: 2px solid var(--or-royal);
+        }
+        .btn-wave {
+            display: inline-block; background: #1c9ade; color: white;
+            padding: 15px 30px; border-radius: 10px; text-decoration: none;
+            font-weight: 800; margin-top: 20px; width: 100%;
+        }
 
         /* FOOTER */
-        footer { 
-            background: #002e17; color: white; 
-            padding: 100px 20px; text-align: center;
-            border-top: 10px solid var(--or-prestige);
-        }
+        footer { background: #001540; color: white; padding: 60px 20px; text-align: center; }
 
         /* RESPONSIVE */
         @media (max-width: 600px) {
-            h1 { font-size: 2em; }
-            h2 { font-size: 1.8em; }
-            section { padding: 60px 15px; }
-            .logo-box { width: 150px; height: 150px; }
+            h1 { font-size: 1.8em; }
+            .logo-box { width: 140px; height: 140px; }
         }
     </style>
 </head>
@@ -141,47 +117,42 @@
 
 <nav>
     <a href="#accueil">Accueil</a>
-    <a href="#esprit">Notre Esprit</a>
+    <a href="#propos">Notre Esprit</a>
     <a href="#missions">Missions</a>
     <a href="#cotisation">Cotisation</a>
-    <a href="#galerie">Galerie</a>
 </nav>
 
 <header id="accueil">
     <div class="logo-box">
-        <img src="photo_2026-03-10_23-47-45.jpg" alt="Logo">
+        <img src="photo_2026-03-10_23-47-45.jpg" alt="Logo Fondation">
     </div>
     <h1>And Ligueyal Mame Khalifa</h1>
     <p class="slogan">Tivaouane • Foi • Solidarité</p>
-    <div style="margin-top: 40px;">
-        <a href="https://wa.me/221764699681" class="btn btn-wa">
-            <i class="fab fa-whatsapp"></i> REJOINDRE LA FAMILLE
-        </a>
-    </div>
+    <a href="https://wa.me/221764699681" class="btn-wa">
+        <i class="fab fa-whatsapp"></i> REJOINDRE LA FAMILLE
+    </a>
 </header>
 
-<section id="esprit">
+<section id="propos">
     <div class="container">
-        <h2>Un Héritage Spirituel</h2>
-        <p style="font-size: 1.3em; line-height: 2; font-weight: 500;">
-            Depuis le <strong>4 février 2022</strong>, sous la direction de <strong>Pape Samba Gueye</strong>, notre fondation fait briller la lumière de Tivaouane. Nous ne sommes pas juste une organisation, nous sommes le cœur battant de la solidarité pour tous les disciples et citoyens.
-        </p>
+        <h2>Une Vision Noble</h2>
+        <p>Fondée le <strong>4 février 2022</strong> par <strong>Pape Samba Gueye</strong>, notre fondation œuvre pour l'entraide et le respect des enseignements de Mame Khalifa. Nous rassemblons la jeunesse pour bâtir un futur solidaire.</p>
     </div>
 </section>
 
-<section id="missions">
+<section id="missions" style="background: var(--gris-tres-leger);">
     <div class="container">
-        <h2>Nos Actions d'Honneur</h2>
+        <h2>Nos Missions</h2>
         <div class="grid">
-            <div class="m-card">
-                <i class="fas fa-star-and-crescent"></i>
-                <h3>Service de la Cité</h3>
-                <p>Logistique, accueil et bien-être des pèlerins lors des grands rassemblements de Tivaouane.</p>
-            </div>
-            <div class="m-card">
+            <div class="card">
                 <i class="fas fa-hand-holding-heart"></i>
-                <h3>Entraide Sacrée</h3>
-                <p>Aide d'urgence, kits alimentaires et soutien financier aux familles les plus éprouvées.</p>
+                <h3>Social</h3>
+                <p>Aide directe aux familles et soutien aux personnes vulnérables.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-mosque"></i>
+                <h3>Religieux</h3>
+                <p>Soutien aux activités de la cité sainte de Tivaouane.</p>
             </div>
         </div>
     </div>
@@ -189,50 +160,28 @@
 
 <section id="cotisation">
     <div class="container">
-        <h2>Espace Cotisation Wave</h2>
-        <p style="font-weight: 700; font-size: 1.1em;">Participez à l'effort de la Fondation en un clic.</p>
+        <h2>Cotisation & Dons</h2>
+        <p>Participez à nos actions en envoyant votre contribution via Wave.</p>
         
-        <div class="pay-card">
-            <img src="wave-logo.png" alt="Wave" style="height: 60px; margin-bottom: 25px;">
+        <div class="wave-card">
+            <img src="wave-logo.png" alt="Wave" style="height: 50px; margin-bottom: 20px;">
+            <p style="text-transform: uppercase; font-size: 0.8em; font-weight: bold; color: #888;">Responsable</p>
+            <p style="font-size: 1.4em; font-weight: 700;">Astou Hann</p>
+            <p style="text-transform: uppercase; font-size: 0.8em; font-weight: bold; color: #888; margin-top: 15px;">Numéro Wave</p>
+            <p style="font-size: 1.4em; font-weight: 700;">+221 76 927 62 52</p>
             
-            <div class="pay-info">
-                <label>Responsable de la Trésorerie</label>
-                <p>Astou Hann</p>
-            </div>
-            
-            <div class="pay-info">
-                <label>Numéro Officiel</label>
-                <p>+221 76 927 62 52</p>
-            </div>
-            <a href="tel:+221769276252" class="btn btn-wave-action btn">
-                <i class="fas fa-mobile-screen"></i> VERSER PAR WAVE DIRECT
-            </a>
-            <p style="margin-top: 25px; font-size: 0.9em; font-weight: bold;">Le don est une semence pour l'au-delà.</p>
-        </div>
-    </div>
-</section>
-
-<section id="galerie">
-    <div class="container">
-        <h2>Galerie d'Honneur</h2>
-        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <img src="photo_2026-03-10_23-47-45.jpg" style="width: 100%; max-width: 450px; border-radius: 30px; border: 8px solid var(--or-prestige); box-shadow: 0 15px 40px rgba(0,0,0,0.3);">
+            <a href="tel:+221769276252" class="btn-wave">PAYER VIA WAVE DIRECT</a>
         </div>
     </div>
 </section>
 
 <footer>
     <div class="container">
-        <h3 style="color: var(--or-prestige); font-size: 1.8em; font-family: 'Playfair Display';">FONDATION AND LIGUEYAL MAME KHALIFA</h3>
-        <p style="letter-spacing: 2px;">Pikine - Dakar - Sénégal</p>
-        <div style="margin: 40px 0; font-size: 1.2em; font-weight: 700;">
-            <p><i class="fas fa-phone-alt" style="color: var(--or-prestige);"></i> +221 76 469 96 81</p>
-        </div>
-        <div style="opacity: 0.7; font-size: 0.8em; margin-top: 50px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
-            &copy; 2026 Site Officiel de la Fondation. Tous droits réservés.
-        </div>
+        <p style="font-family: 'Playfair Display', serif; font-size: 1.5em; color: var(--or-royal);">FONDATION AND LIGUEYAL MAME KHALIFA</p>
+        <p>Contact : +221 76 469 96 81</p>
+        <p style="font-size: 0.7em; opacity: 0.5; margin-top: 30px;">&copy; 2026 - Site Officiel. Tous droits réservés.</p>
     </div>
 </footer>
 
 </body>
-</html>
+</html> 
